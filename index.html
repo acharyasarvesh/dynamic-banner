@@ -16,19 +16,68 @@
 		<header>
 			<img class="center logo" src="img/logo.png" alt="Logo">
 		</header>
-		<section>
-			<img class="center" src="img/img-1.jpg" alt="Placeholder">
-		</section>
-		<footer>
-			<div class="row">
-				<div class="col-6">
-					<h4>Option 1A</h4>
-				</div>
-				<div class="col-6">
-					<h4>Option 1B</h4>
+		<div id="tabs" class="c-tabs no-js">
+			<div class="c-tab is-active">
+				<div class="c-tab__content">
+					<img class="center" src="img/img-1.jpg" alt="Placeholder1">
 				</div>
 			</div>
-		</footer>
+			<div class="c-tab">
+				<div class="c-tab__content">
+					<img class="center" src="img/img-2.jpg" alt="Placeholder2">
+				</div>
+			</div>
+			<div class="c-tab">
+				<div class="c-tab__content">
+					<img class="center" src="img/img-3.jpg" alt="Placeholder3">
+				</div>
+			</div>
+			<footer class="c-tabs-nav">
+				<div class="c-tabs-nav">
+					<div class="c-tabs-nav__link is-active">
+						<div class="row">
+							<div class="col-6">
+								<a href="#" >Option 1A</a>
+							</div>
+							<div class="col-6">
+								<a href="#">Option 1B</a>
+							</div>
+						</div>
+					</div>
+					<div class="c-tabs-nav__link">
+						<div class="row">
+							<div class="col-6">
+								<a href="#">Option 2A</a>
+							</div>
+							<div class="col-6">
+								<a href="#">Option 2B</a>
+							</div>
+						</div>
+					</div>
+					<div class="c-tabs-nav__link">
+						<a href="" class="repeat">
+							<img src="img/refresh.png">
+						</a>
+						<div class="row">
+							<div class="col-12">
+								<a href="#">Shop Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
 	</div>
+
+	<script src="js/tabs.js"></script>
+	<script type="text/javascript">
+		var myTabs = tabs({
+			el: '#tabs',
+			tabNavigationLinks: '.c-tabs-nav__link',
+			tabContentContainers: '.c-tab'
+		});
+
+		myTabs.init();
+	</script>
 </body>
 </html>
